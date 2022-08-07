@@ -1,8 +1,23 @@
-/** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin")
+const colors = require("tailwindcss/colors")
+
 module.exports = {
-  content: [],
+  mode: 'jit',
+  purge:{
+    enabled: true,
+    content: ['./resources/views/**/*/.blande.php', './safelist.txt'],
+    options: {
+      safelist: []
+    }
+  },
+  content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      'header':['font-bb']
+    },
+    backgroundImage:{
+      'topo': "url('../src/images/pool.jpg')"
+  }
   },
   plugins: [],
 }
