@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .background-topo{
+        background-image: url('../src/images/beachbg.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+    }
+    .swiper {
+        width: 600px;
+        height: 300px;
+      }
+      .center{
+        width: 1000px;
+        margin: 0 auto;
+      }
+}
