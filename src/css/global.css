@@ -10,4 +10,12 @@
         background-position: center center;
         background-size: 100%;
     }
+    .swiper {
+        width: 600px;
+        height: 300px;
+      }
+      .center{
+        width: 1000px;
+        margin: 0 auto;
+      }
 }

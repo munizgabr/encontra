@@ -5,15 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../build/tailwind.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        />
+
+    <style>
+        .swiper-button-next,
+        .swiper-button-prev{
+            display:none;
+      }
+    </style>
     <title>Encontra</title>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-600">
     <!-- Header -->
     <div>
         <div class="container mx-auto px-4 h-24 flex flex-row justify-between items-center">
-            <div class="font-black">
-                logo
-            </div>
+            <img src="./images/logo.png" alt="Logo Encontre">
             <ul class="flex flex-row space-x-4">
                 <li>
                     <a class="text-sm text-gray-600 hover:text-gray-400 hover:underline" href="">Como reservar</a>
@@ -31,14 +40,14 @@
         </div>
     </div>
     <!-- banner -->
-    <div class="background-topo block h-96">
-        <div class="container flex justify-center items-center h-full mx-auto px-4 ">
+    <div class="background-topo block h-96 py-20">
+        <div class="container flex justify-center items-center h-full mx-auto px-4">
             <div>
                 <div class="text-center">
                     <h1 class="text-gray-200 font-bold text-4xl mb-2">Onde você quer ir?</h1>
                     <p class="text-green-200 text-lg">Escolha os melhores hoteis do litoral de São Paulo com descontos esclusivos!</p>
                 </div>
-               <div class=>
+               <div>
                 <form class="flex flex-row justify-around items-center mt-6" action="">
                     <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded-lg text-gray-500" name="state" id="state">
                         <option value="estado">Escolha a cidade</option>
@@ -46,7 +55,7 @@
                     <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded-lg text-gray-500" name="city" id="city">
                         <option value="estado">Escolha o bairro</option>
                     </select>
-                    <button class="inline-flex items center text-gray-100 bg-green-900 font-medium px-3 max-w-fit py-2 rounded-lg">
+                    <button class="inline-flex items-center text-gray-100 bg-green-900 font-medium px-3 max-w-fit py-2 rounded-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>Pesquisar resorts
                     </button>
                 </form>
@@ -55,6 +64,147 @@
         </div>
     </div>
 
-    
+    <!-- highlights -->
+
+    <div>
+        <div class="container mx-auto px-4 py-10">
+            <div class="flex center space-x-6">
+                <div class="flex flex-col justify-start">
+                    <h2 class="uppercase text-xs font-semibold text-gray-400">Hoteis em destaque</h2>
+                    <span class="text-2xl">DPNY - Praia do Curral em Ilhabela/SP</span>
+                    <span class="uppercase text-xs font-semibold text-gray-400">5 estrelas</span>
+                    <p class="text-xs font-semibold text-gray-400 mt-4">
+                        Eleito o Melhor Hotel de Praia da América do Sul pelo Condé Nast, o DPNY Beach Hotel & SPA 
+                        é um excelente refúgio ao ar livre e pé na areia 
+                        para quem procura sossego, tranquilidade, bem-estar e uma incrível 
+                        gastronomia. Tudo isso combinado a instalações luxuosas que fazem o Hotel 
+                        ser simplesmente único.
+
+
+                    </p>
+                </div>
+
+                <div class="flex-shrink-0">
+                        <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img class="w-full h-full object-cover border border-black rounded-sm" src="./images/dpny.jpeg" alt="DPNY HOTEL e SPA">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/tw.jpg" alt="TW Guaimbé">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/portopauba.jpg" alt="Porto Paúba Resort">
+                        </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hoteis -->
+    <div>
+        <div class="container center mx-auto px-4">
+            <div>
+                <h3 class="text-2xl font-semibold uppercase text-center mb-8">Conheça mais hoteis</h3>
+                <div class="grid grid-cols-4 grid-rows-2 gap-6">
+                    <div class="relative col-span-2 row-span-2 rounded-lg overflow-hidden border border-black">
+                        <div class="absolute bottom-0 pl-4   w-full bg-green-900 bg-opacity-70">
+                            <span class="text-white font bold">Hotel Ilhabela</span>
+                        </div>
+                        <img class="h-full w-full object-cover" src="./images/hotelilhabela.jpg" alt="">
+                    </div>
+                    <div class="relative col-span-2 h-40 rounded-lg overflow-hidden border border-black">
+                        <div class="absolute bottom-0 pl-4   w-full bg-green-900 bg-opacity-70">
+                            <span class="text-white font bold">Hotel Boutique</span>
+                        </div>
+                        <img class="h-full w-full object-cover" src="./images/kalango-hotel-boutique.jpg" alt="">
+                    </div>
+                    <div class="relative vrounded-lg overflow-hidden border border-black">
+                        <div class="absolute bottom-0 pl-4   w-full bg-green-900 bg-opacity-70">
+                            <span class="text-white font bold">Casa di Sirena</span>
+                        </div>
+                        <img class="h-full w-full object-cover" src="./images/casadisirena.jpg" alt="">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden border border-black">
+                        <div class="absolute bottom-0 pl-4   w-full bg-green-900 bg-opacity-70">
+                            <span class="text-white font bold">Hotel Itapemar</span>
+                        </div>
+                        <img class="h-full w-full object-cover" src="./images/pool--v12800302.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search form -->
+    <div class="container mx-auto py-20">
+        <form class="flex flex-row justify-around items-center mt-6 w-1/2 mx-auto" action="">
+            <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded-lg text-gray-500" name="state" id="state">
+                <option value="estado">Escolha a cidade</option>
+            </select>
+            <select class="bg-gray-50 px-3 py-2 border border-gray-300 rounded-lg text-gray-500" name="city" id="city">
+                <option value="estado">Escolha o bairro</option>
+            </select>
+            <button class="inline-flex items-center text-gray-100 bg-green-900 font-medium px-3 max-w-fit py-2 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>Pesquisar resorts
+            </button>
+        </form>
+       </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="border border-gray-200">
+      <div class="center">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <img src="./images/logo.png" alt="Logo Encontre">
+            <div>
+                REDES SOCIAIS
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            loop:true,
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
 </body>
 </html>
