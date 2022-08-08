@@ -1,8 +1,11 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.1.8"
-  },
-  "dependencies": {
-    "swiper": "^8.3.2"
-  }
+    "devDependencies": {
+        "tailwindcss": "^3.1.8"
+    },
+    "dependencies": {
+        "swiper": "^8.3.2"
+    },
+    "scripts": {
+        "build": "npx -i ./src/css/global.css -o ./build/tailwind.css"
+    }
 }
