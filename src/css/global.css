@@ -19,3 +19,15 @@
         margin: 0 auto;
       }
 }
+
+@media screen and (max-width: 1040px){
+  .hotels{
+    @apply flex-col justify-center items-center
+  }
+  .hotels>div{
+    text-align: center;
+  }
+  .container{
+    width: 100% !important;
+  }
+}
